@@ -63,6 +63,18 @@ float Kp =   0.5;
 float Kd =   0;
 float Ki =   0;
 //ros::NodeHandle nh;
+double rpm_act1 = 0.0;
+double rpm_act2 = 0.0;
+double rpm_req1 = 0.0;
+double rpm_req2 = 0.0;
+double gyro_x = 0.0;
+double gyro_y = 0.0;
+double gyro_z = 0.0;
+double rpm_dt = 0.0;
+double x_pos = 0.0;
+double y_pos = 0.0;
+double theta = 0.0;
+
 
 void handle_cmd( const geometry_msgs::Twist& cmd_msg) {
   double x = cmd_msg.linear.x;
@@ -84,23 +96,6 @@ void handle_cmd( const geometry_msgs::Twist& cmd_msg) {
 }
 
 
-
-
-double rpm_act1 = 0.0;
-double rpm_act2 = 0.0;
-double rpm_req1 = 0.0;
-double rpm_req2 = 0.0;
-double gyro_x = 0.0;
-double gyro_y = 0.0;
-double gyro_z = 0.0;
-double rpm_dt = 0.0;
-double x_pos = 0.0;
-double y_pos = 0.0;
-double theta = 0.0;
-ros::Time current_time;
-ros::Time rpm_time(0.0);
-ros::Time last_time(0.0);
-
 void handle_rpm( const geometry_msgs::Vector3Stamped& rpm) {
   rpm_act1 = rpm.vector.x;
   rpm_act2 = rpm.vector.y;
@@ -114,8 +109,12 @@ void handle_gyro( const geometry_msgs::Vector3& gyro) {
   gyro_z = gyro.z;
 }
 
+ros::Time current_time;
+ros::Time rpm_time(0.0);
+ros::Time last_time(0.0);
+
 int main(int argc, char** argv){
-ros::init(argc, argv, "base_controller");
+ros::init(argc, argv, "Nathaniel_controller");
   ros::NodeHandle n;
   ros::NodeHandle nh_private_("~");
   ros::Subscriber<geometry_msgs::Twist> sub("cmd_vel", handle_cmd);
