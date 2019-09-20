@@ -1,1 +1,3 @@
-# my_personal_robotic_companion
+NathanielBots 4.0
+
+Is a micro-robots running ROS
