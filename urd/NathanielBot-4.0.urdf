@@ -1,5 +1,5 @@
  <?xml version="1.0"?>
-   <robot name="my_personal_robotic_companion">
+   <robot name="NathanielBot-4.0">
     <link name="base_link">
       <visual>
         <geometry>
