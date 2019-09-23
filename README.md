@@ -9,7 +9,10 @@ Is one of the world smallest  micro-robots that has a complete feature of runnin
 The micro-robot also has a set of configuration to be used from a neophyte roboticist 
 to advance level of users.
 
-Christopher Coballes
+
 XentrinoBot
 NathanielBot-4.0
 RANDYBot-4.0
+
+
+Christopher Coballes
