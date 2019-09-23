@@ -10,8 +10,10 @@ The micro-robot also has a set of configuration to be used from a neophyte robot
 to advance level of users.
 
 
-XentrinoBot
+XentrinoBot 4.0
+
 NathanielBot-4.0
+
 RANDYBot-4.0
 
 
