@@ -12,8 +12,8 @@
 #include <stdio.h>
 #include <cmath>
 #include <algorithm>
-#include <robot_specs.h>
-
+//#include <robot_specs.h>
+#include<NathanielBot.h>
 
 double rpm_act1 = 0.0;
 double rpm_act2 = 0.0;
